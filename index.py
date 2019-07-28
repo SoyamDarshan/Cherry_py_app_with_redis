@@ -38,9 +38,9 @@ class Index(object):
 if __name__ == '__main__':
     conf = {"/static/css": {"tools.staticdir.on": True,
                             "tools.staticdir.dir": os.path.abspath("./static/css/"), },
-            'host_and_port'{'server.socket_host': '0.0.0.0',
-                            'server.socket_port': int(os.environ['PORT']),
-                            }
+            'host_and_port': {'server.socket_host': '0.0.0.0',
+                              'server.socket_port': int(os.environ['PORT']),
+                              }
             }
     # print(conf)
     cherrypy.quickstart(Index(), '/', config=conf)
