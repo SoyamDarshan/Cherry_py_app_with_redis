@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/not_found.css" />
+  </head>
+  <body>
+    <div class="ui container">
+      <div class="ui inverted pointing menu">
+        <a class="active item" href="/">
+          Home
+        </a>
+        <div class="right menu">
+          <div class="item">
+            <div class="ui category search">
+              <div class="ui icon input">
+                <form method="get" action="search">
+                  <input
+                    class="prompt"
+                    type="text"
+                    name="search_value"
+                    placeholder="Search by name..."
+                  />
+                  <i class="search icon"></i>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui segment">
+        {% block error %} {% endblock %} {% block table_view %} {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

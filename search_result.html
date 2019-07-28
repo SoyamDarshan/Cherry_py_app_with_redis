@@ -1,0 +1,26 @@
+{% extends 'index.html'%} {% block table_view %}
+<table class="ui celled table">
+  <thead>
+    <tr>
+      <th>Net Profit %</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Open</th>
+      <th>High</th>
+      <th>Low</th>
+      <th>Close</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td data-label="table_profit">{{ table_data["profit"] }}</td>
+      <td data-label="table_name">{{ table_data["name"] }}</td>
+      <td data-label="table_code">{{ table_data["code"] }}</td>
+      <td data-label="table_open">{{ table_data["open"] }}</td>
+      <td data-label="table_high">{{ table_data["high"] }}</td>
+      <td data-label="table_low">{{ table_data["low"] }}</td>
+      <td data-label="table_close">{{ table_data["close"] }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock%}
