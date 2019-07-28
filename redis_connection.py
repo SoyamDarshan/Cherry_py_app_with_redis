@@ -1,3 +1,4 @@
+import os
 import operator
 import redis
 
@@ -9,13 +10,8 @@ db = 0
 
 def redis_connect():
     try:
-        connect = redis.StrictRedis(
-            host=redis_host,
-            port=redis_port,
-            password=redis_password,
-            db=0,
-            decode_responses=True
-        )
+        connect = redis.from_url(os.environ.get("REDIS_URL")
+                                 )
 
         return connect
     except Exception as e:
