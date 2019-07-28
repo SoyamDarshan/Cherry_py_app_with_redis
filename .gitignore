@@ -1,5 +1,7 @@
 # Exclude Folders
 __pycache__/
+downloads/
+extracted_files/
 /.vscode/*
 *.ZIP
 *.CSV
