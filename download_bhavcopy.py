@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import glob
 import os
 
+
 url = 'https://www.bseindia.com/markets/MarketInfo/BhavCopy.aspx'
 
 
