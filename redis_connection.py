@@ -11,7 +11,7 @@ db = 0
 def redis_connect():
     try:
         connect = redis.from_url(os.environ.get(
-            "REDIS_URL"), db=1, decode_responses=True)
+            "REDIS_URL", None), db=1, decode_responses=True)
 
         return connect
     except Exception as e:
@@ -20,7 +20,6 @@ def redis_connect():
 
 def insert_into_redis(rc, key_name, data):
     rc.hmset(key_name, data)
-    # print('Inserted')
     return
 
 

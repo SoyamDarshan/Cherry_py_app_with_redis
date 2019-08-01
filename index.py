@@ -2,8 +2,6 @@ import os
 import cherrypy
 from jinja2 import Environment, FileSystemLoader
 import redis_connection
-import download_bhavcopy
-import extract_file_from_zip_file
 import read_csv_file
 
 
